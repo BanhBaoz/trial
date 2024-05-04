@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>About Sensors</title>
+        <style>
+            ol li {
+                font-weight:bold;
+            }
+            li > * {
+                font-weight:normal;
+            }
+            ol li::marker{
+                font-size:1.20em;
+            }
+        </style>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link href="sensors.css" rel="stylesheet" />
+        <link href="style.css" rel="stylesheet" />
+        <link href="plants.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container px-5">
+            <a class="navbar-brand" href="#page-top" class="col">Home Plants Monitoring</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="./index.html" >Main Page</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./plant_l.html">Plant List</a></li>
+                    <li class="nav-item"><a class="nav-link">About Sensors</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+   
+    <section id="title" class="gradient-background">
+
+        <div class="container col-xxl-8 px-4 pt-5">
+          <div class="row flex-lg-row-reverse align-items-center gx-5 pt-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+              
+            </div>
+            <div class="col-lg-12">
+              <h1 class="display-1 fw-bold  lh-1 mb-0 height" >About Sensors</h1>
+    
+              <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-12">
+                    <article>
+                        <header class="mb-4">
+                            <h3 class="display-4 fw-bolder mb-1">Sensor Instruction</h1>
+                        </header>
+                        
+                        <figure class="mb-4"><img class="img-fluid rounded" src="sens_instr.png" alt="..." /></figure>
+                        <section class="mb-5">
+                            <ol>
+                                <li><p class="fs-5 mb-4">&nbsp;Ensure that the microSD card is inserted.</p></li>
+                                <li><p class="fs-5 mb-4">&nbsp;Ensure that the light sensor on top of the box is not covered with anything. It shall receive the amount of sunlight similar the sunlight directed at the examined plant.</p></li>
+                                <li><p class="fs-5 mb-4">&nbsp;Gently insert the soil moisture module into the pot, so that no cables get disconnected.
+                                </p></li>
+                                <li><p class="fs-5 mb-4">&nbsp;Plug the sensor into the electrical network using USB-mini cable.
+                                </p></li>
+                                <li><p class="fs-5 mb-4">&nbsp;The microcomputer is starting, yellow light indicates it.
+                                </p></li>
+                                <li><p class="fs-5 mb-4">&nbsp;While the particular modules are switching on the light remains yellow. If something went wrong the light would turn red. In that case try to replug the microcontroller.
+                                </p></li>
+                                <li><p class="fs-5 mb-4">&nbsp;When all the modules have started properly, the sensor writes the modules’ states to a file. If this process succeeds, the light turns green, then everything is working properly. However, if the file couldn’t have been opened the light turns orange.</p></li>
+                                <li><p class="fs-5 mb-4">&nbsp;Leave the sensor for any amount of time desired.
+                                </p></li>
+                                <li><p class="fs-5 mb-4">&nbsp;Unplug the sensor from the power source when finishing taking data.
+                                </p></li>
+                                <li><p class="fs-5 mb-4">&nbsp;Take the soil moisture module out.
+                                </p></li>
+                                <li><p class="fs-5 mb-4">&nbsp;Uncover the lid of the box and take the microSD card out. The file with the data from the measurements is available there.
+                                </p></li>
+                            </ol>
+                            <hr>
+                            <h2 class="fw-bolder mb-4 mt-5">Additional Information</h2>
+                            <p class="fs-5 mb-4">The sensor is a device assembled to collect data about a plant’s environment in-real time to determine its perfect living conditions. The most crucial factors influencing a plant’s state are: soil moisture, air humidity, ambient temperature and irradiation.</p>
+                            <p class="fs-5 mb-4">A sensor was built with the following modules:</p>
+                            <ul>
+                                <li><p class="fs-5 mb-4"> <span class="fw-bold p-1">Arduino Nano - base of the sensor: </span>It is equipped with an ATmega328P microcontroller which is the brain of our board and CH340 chip. It has 32kB of Flash memory, 2kB of RAM.</p></li>
+                                <li><p class="fs-5 mb-4"> <span class="fw-bold p-1">AHT20 – temperature and humidity sensor I2C: </span> It allows measuring temperature from -40°C to 85°C with an accuracy of 0,3°C and humidity with an accuracy of 2%. It is connected to the board via VIN and GND for a power supply and SCL and SDA for signal transmission.</p></li>
+                                <li><p class="fs-5 mb-4"> <span class="fw-bold p-1">BH1750 – light intensity sensor:  </span> This sensor operates in the range: 1 – 65535 lx scale with resolution up to 1 lx. It is connected to the board via VIN and GND for a power supply. For the signal transmission the module uses SDA and SCL which are connected to analogue pins on the microcomputer. </p></li>
+                                <li><p class="fs-5 mb-4"> <span class="fw-bold p-1">Soil moisture sensor: </span> Allows to determine most crucial factor in analysis of the plant environment. It returns the information using analogue input on the board, giving us the information in range from 0% to 100% about the soil moisture. It uses the same power supply method as previous modules. </p></li>
+                                <li><p class="fs-5 mb-4"> <span class="fw-bold p-1">Micro SD Card Reader Module:  </span>  Using this device all of our measurements on micro SD cards can be saved and stored and analysed later. It uses 5V VCC for power supply and four additional pins for transferring data from the board.</p></li>
+                                <li><p class="fs-5 mb-4"> <span class="fw-bold p-1">LED RGB diode module: </span> It is going to communicate the sensor’s states to the user by flashing different colours (further described in the instruction). It uses 5V VCC and GND pins for a power  supply and digital output pin for data transmission.</p></li>
+                                <li><p class="fs-5 mb-4"> <span class="fw-bold p-1">RTC DS-1302 – real time clock: </span> Enables the sensor to point an exact date and time a measurement is taken. It has to be power constantly with the CR2032 battery. This module is connected to the board over VCC and GND for a power supply and SCL and SDA pins for data transfer.</p></li>
+                            </ul>
+                            <p class="fs-5 mb-4">The device is powered by a USB-mini cable connected to an Arduino board, so it’s very easy to set it at any place desired. </p>
+                            
+                        </section>
+                    </article> 
+                </div>
+            </div>
+        </div>
+        
+        
+        <footer class="py-3 bg-black">
+            <div class="container px-5"><p class="m-0 text-center text-white small">Copyright &copy; Group nr3</p></div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+        
+    </body>
+</html>
